@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+<link rel="stylesheet" href="/stylesheets/styles.css"/>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="/scripts/jquery.js"></script>
+</head>
+<body id="first">
+
+{{#logged_in}}
+<div class="main">
+  <ul>
+     <li><a class="nav_bar" href="/home">Home</a></li>
+     <li><a href="/cashflow">Cash Flow</a></li>
+     <li><a href="/investments">Investments</a></li>
+     <li><a href="/realstate">Buying Real State</a></li>
+  <li><a class="profile" href="/user">My profile</a></li>
+  <li><a class="out" href="/logout">Logout</a></li>
+</ul>
+</div>
+
+<!--<div class="updating">
+<form action = "/user?_method=PUT" method="post">
+<h5>Update your email:</h5>
+<input type="text" placeholder="New user-email" name="email">
+<button class="update">Update</button>
+</form>
+
+<form action = "/user?_method=PUT" method="post">
+<h5>Update your password:</h5>
+<input type="password" placeholder="New password" name="password_digest">
+<button class="update">Update</button>
+</form>-->
+<div id="news1">
+  <div class="n1">
+  <img class="img1">
+  <h2 class="title1">Title</h2>
+  <p class="desc1">Description</p>
+  <a class="link1" href="">Read More</a>
+  </div>
+
+   <div class="n2">
+   <img class="img2">
+   <h2 class="title2"></h2>
+   <p class="desc2"></p>
+   <a class="link2" href="">Read More</a>
+   </div>
+
+  <div class="n3">
+  <img class="img3">
+  <h2 class="title3"></h2>
+  <p class="desc3"></p>
+  <a class="link3" href="">Read More</a>
+  </div>
+</div>
+
+<div id="news2">
+  <div class="n3">
+  <img class="img4">
+  <h2 class="title4"></h2>
+  <p class="desc4"></p>
+  <a class="link4" href="">Read More</a>
+  </div>
+
+   <div class="n4">
+   <img class="img5">
+   <h2 class="title5"></h2>
+   <p class="desc5"></p>
+   <a class="link5" href="">Read More</a>
+   </div>
+
+  <div class="n6">
+  <img class="img6">
+  <h2 class="title6"></h2>
+  <p class="desc6"></p>
+  <a class="link6" href="">Read More</a>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+  <form action = "/user?_method=DELETE" method="post">
+    <h5>Delete Profile: <button class="update">Delete</button></h5>
+  </form>
+</div>
+<br>
+
+{{/logged_in}}
+
+{{^logged_in}}
+<div class="main">
+  <div class = "log">
+  <form action="/login" method="post">
+     <h5>E-mail:</h5><br>
+     <input class = "beginning" type="text" placeholder="E-mail" name="email"><br>
+     <h5>Password:</h5><br>
+     <input class = "beginning" type="password" placeholder="Password" name="password"><br>
+  </div>
+  <br>
+<button class="log-in" type="submit">Login</button>
+</form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+ <div id = "invitation">
+  <p>Not a member? <a href="/signup">Sign Up!</a></p>
+</div>
+{{/logged_in}}
+
+</body>
+<footer>
+</footer>
+<script src="/scripts/script.js"></script>
+</html>
