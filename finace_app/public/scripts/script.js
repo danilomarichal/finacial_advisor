@@ -1,7 +1,7 @@
 
 var callAjax = function(){
     $.ajax({
-        url:"https://newsapi.org/v1/articles?source=cnbc&sortBy=top&apiKey=cb28f3de0e7c4d70bbee48d3055a1026",
+        url:"https://newsapi.org/v1/articles?source=cnbc&sortBy=top&apiKey=68f4245b2e8c4c6d81828596e6ef2a79",
         method:"GET",
         success: function(data){
         console.log(data);
@@ -39,6 +39,17 @@ var callAjax = function(){
   })
 }
 callAjax();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
