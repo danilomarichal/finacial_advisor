@@ -41,11 +41,34 @@ var callAjax = function(){
 callAjax();
 
 
-
-
-
-
-
+$('.bttn_sum').on('click', function(){
+  var total_income = Number($('input')[0].value) + Number($('input')[1].value) + Number($('input')[2].value)+ Number($('input')[3].value)+ Number($('input')[4].value)+ Number($('input')[5].value)+ Number($('input')[6].value)+ Number($('input')[7].value)+Number($('input')[8].value);
+  var total_expenses = Number($('input')[9].value) + Number($('input')[10].value) + Number($('input')[11].value)+ Number($('input')[12].value)+ Number($('input')[13].value)+ Number($('input')[14].value)+ Number($('input')[15].value)+ Number($('input')[16].value)+Number($('input')[17].value);
+  var savings = total_income - total_expenses ;
+  var ten_perc = savings*10/100;
+  console.log(ten_perc);
+  console.log(total_income);
+  console.log(total_expenses);
+  console.log(savings);
+  $('#income_form').text("");
+  $('#expenses_form').text("");
+  $('.bttn_sum').remove();
+  $('.income').text("Total-Income: $"+total_income);
+  $('.expenses').text("Total-Expenses: $"+total_expenses)
+  $('.saving').text("Savings: $"+savings);
+  if(savings <= 0){
+    $('#big').text("Alert!!");
+    $('#message').text("Looks like your expenses exceed your annual income.Time to consider revising your budget.")
+  }
+  else if(savings < ten_perc){
+   $('#big').text("Oops!!");
+    $('#message').text("Looks like your savings are less than the 10% of your income. Reducing some of the expenses could increase this amount.")
+  }
+  else if(savings > ten_perc){
+    $('#big').text("Congratulations!");
+    $('#message').text("Your numbers show income in excess of expenses. This surplus equals: $"+savings+" per month.")
+  }
+})
 
 
 

@@ -200,7 +200,6 @@ label{
 }
 #income_form{
   display: inline-block;
-  float:left;
   width: 300px;
   height: 350px;
   margin-left: 180px;
@@ -247,10 +246,7 @@ display: inline-block;
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-.bttn_sum{
- clear:both;
-  margin-left: -250px;
-}
+
 
 .bar {
   fill: green;
@@ -278,4 +274,51 @@ display: inline-block;
 .profiles{
   float:left;
   margin-left: 200px;
+}
+.bttn_sum{
+  height: 120px;
+  width: 120px;
+  margin-left:20%;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  border: 4px solid grey;
+}
+.total_in{
+  float:left;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.total_out{
+  float:left;
+  margin-top:100px;
+  margin-left:400px;
+}
+.form1{
+height: 500px;
+width: 500px;
+
+float: left;
+}
+.form1 .income{
+  width:305px;
+  margin-left: 180px;
+}
+.form2{
+height: 500px;
+width: 500px;
+float:left;
+}
+.form2 .expenses{
+  width: 305px;
+  padding-left: 400px;
+}
+.saving{
+ margin-top: -422px;
+ margin-left: 70px;
+}
+#big{
+  margin-left: 70px;
+  margin-top: 100px;
 }

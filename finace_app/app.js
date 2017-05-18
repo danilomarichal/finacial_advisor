@@ -130,7 +130,21 @@ app.get('/realstate', function(req, res){
   res.render("realstate/index")
 });
 
+app.get('/profile',function(req, res){
+  res.render("profile/index")
+})
 
-app.listen(3000, function () {
+app.get('/', function(req,res){
+  db.one("SELECT * FROM users")
+  .then(function(data){
+    var user ={
+    name: data.first_name,
+    last: data.last_name
+  }
+res.render("index", user);
+  });
+});
+
+app.listen(3000, function() {
   console.log("Server Running {^-^}");
 });

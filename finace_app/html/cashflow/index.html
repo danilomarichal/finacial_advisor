@@ -6,75 +6,92 @@
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <script src="/scripts/jquery.js"></script>
 </head>
+
 <body>
+
 <div class="main">
   <ul>
      <li><a class="nav_bar" href="/">Home</a></li>
      <li><a href="/cashflow">Cash Flow</a></li>
      <li><a href="/investments">Investments</a></li>
      <li><a href="/realstate">Buying Real State</a></li>
-  <li><a class="profile" href="/profile">My profile</a></li>
-  <li><a class="out" href="/logout">Logout</a></li>
-</ul>
+     <li><a class="profile" href="/profile">My profile</a></li>
+     <li><a class="out" href="/logout">Logout</a></li>
+   </ul>
 </div>
-
+<br>
+<div id="container">
+<br>
+<div class="form1">
+<h2 class = "income">Sources of Income (Monthly)</h2>
 <div id="income_form">
-<h2 class = "income">Sources of Income</h2>
-<form action="">
-  <label>Earned Income(W2) or (1099)</label> <input  placeholder="0.00"  type="text" >
+  <form class="i" action="">
+    <label>Earned Income(W2) or (1099)</label> <input  placeholder="0.00"  type="text" >
     <br>
-  <label>Salary Bonus</label> <input  placeholder="0.00"  type="text">
-  <br>
-  <label>Alimony</label> <input  placeholder="0.00"  type="text">
-  <br>
-  <label>Rental Income</label> <input  placeholder="0.00"  type="text"  >
-  <br>
-  <label>Social Security</label> <input  placeholder="0.00"  type="text" >
-  <br>
-  <label>Pension</label> <input  placeholder="0.00"  type="text" >
-  <br>
-  <br>
-  <label>investments Income</label>
-  <br>
-  <br>
-  <label>Interest</label> <input  placeholder="0.00"  type="text"  >
-  <br>
-  <label>Dividends</label> <input  placeholder="0.00"  type="text" >
-  <br>
-  <label>Capital Gains</label> <input  placeholder="0.00"  type="text" >
-  <br>
-</form>
+    <label>Salary Bonus</label> <input  placeholder="0.00"  type="text">
+     <br>
+     <label>Alimony</label> <input  placeholder="0.00"  type="text">
+     <br>
+     <label>Rental Income</label> <input  placeholder="0.00"  type="text"  >
+     <br>
+     <label>Social Security</label> <input  placeholder="0.00"  type="text" >
+     <br>
+     <label>Pension</label> <input  placeholder="0.00"  type="text" >
+     <br>
+     <br>
+     <label>investments Income</label>
+     <br>
+     <br>
+     <label>Interest</label> <input  placeholder="0.00"  type="text"  >
+     <br>
+     <label>Dividends</label> <input  placeholder="0.00"  type="text" >
+     <br>
+     <label>Capital Gains</label> <input  placeholder="0.00"  type="text" >
+     <br>
+  </form>
+  </div>
+</div>
 
-</div>
-<div id="expenses_form">
-<h2 class = "expenses">Expenses</h2>
-<form>
-  <label>Mortgage/Rent & Taxes</label> <input placeholder="0.00"  type="text" >
-  <br>
-  <label>Loans/Debts</label> <input placeholder="0.00"  type="text" >
-  <br>
-  <label>Utilities</label> <input placeholder="0.00"  type="text"  >
-  <br>
-  <label>Transportation</label> <input placeholder="0.00"  type="text" >
-  <br>
-  <label>Everyday Expenses</label> <input placeholder="0.00"  type="text"  >
-  <br>
-  <label>Health/Life Insurance</label> <input placeholder="0.00"  type="text">
-  <br>
-  <label>Children Education</label> <input placeholder="0.00"  type="text" >
-  <br>
-  <label>Vacations/Personal Care</label> <input placeholder="0.00"  type="text" >
-  <br>
-  <label>Extraordinary & One Time Expenses</label> <input placeholder="0.00"  type="text">
-  <br>
-</form>
+
+<div class="form2">
+   <h2 class = "expenses">Expenses (Monthly)</h2>
+   <div id="expenses_form">
+    <form class="x">
+      <label>Mortgage/Rent & Taxes</label> <input placeholder="0.00"  type="text" >
+      <br>
+      <label>Loans/Debts</label> <input placeholder="0.00"  type="text" >
+      <br>
+      <label>Utilities</label> <input placeholder="0.00"  type="text"  >
+      <br>
+      <label>Transportation</label> <input placeholder="0.00"  type="text" >
+      <br>
+      <label>Everyday Expenses</label> <input placeholder="0.00"  type="text"  >
+      <br>
+      <label>Health/Life Insurance</label> <input placeholder="0.00"  type="text">
+      <br>
+      <label>Children Education</label> <input placeholder="0.00"  type="text" >
+      <br>
+      <label>Vacations/Personal Care</label> <input placeholder="0.00"  type="text" >
+      <br>
+      <label>Extraordinary & One Time Expenses</label> <input placeholder="0.00"  type="text">
+     <br>
+   </form>
 </div>
 <br>
 <br>
-  <button class="bttn_sum placeholder="0.00"" type="submit">Submit Income/Expenses</button>
-<div class="loader"></div>
+  <button class="bttn_sum" type="submit">Calculate Savings</button>
+
+<h2 class="saving"></h2>
+<h2 class="annual_i"></h2>
+<h2 class="annual_s"></h2>
+<h2 class="annual_x"></h2>
+
+<div id="message_savings">
+<h1 id="big"></h1>
+<p id="message"></p>
+</div>
 </div>
 </body>
-<script src="/scripts/script.></script>
+<script src="/scripts/script.js"></script>
 </html>
 
