@@ -1,10 +1,10 @@
-
+//API call News
 var callAjax = function(){
     $.ajax({
         url:"https://newsapi.org/v1/articles?source=cnbc&sortBy=top&apiKey=68f4245b2e8c4c6d81828596e6ef2a79",
         method:"GET",
         success: function(data){
-        console.log(data);
+
         $('.img1').attr('src',data.articles[0].urlToImage);
         $('.title1').text(data.articles[0].title);
         $('.desc1').text(data.articles[0].description);
@@ -40,12 +40,14 @@ var callAjax = function(){
 }
 callAjax();
 
+//--------------------------------------------------------
+//DOM Cash Flow
 
 $('.bttn_sum').on('click', function(){
   var total_income = Number($('input')[0].value) + Number($('input')[1].value) + Number($('input')[2].value)+ Number($('input')[3].value)+ Number($('input')[4].value)+ Number($('input')[5].value)+ Number($('input')[6].value)+ Number($('input')[7].value)+Number($('input')[8].value);
   var total_expenses = Number($('input')[9].value) + Number($('input')[10].value) + Number($('input')[11].value)+ Number($('input')[12].value)+ Number($('input')[13].value)+ Number($('input')[14].value)+ Number($('input')[15].value)+ Number($('input')[16].value)+Number($('input')[17].value);
   var savings = total_income - total_expenses ;
-  var ten_perc = savings*10/100;
+  var ten_perc = total_income*10/100;
   console.log(ten_perc);
   console.log(total_income);
   console.log(total_expenses);
@@ -69,6 +71,172 @@ $('.bttn_sum').on('click', function(){
     $('#message').text("Your numbers show income in excess of expenses. This surplus equals: $"+savings+" per month.")
   }
 })
+
+//--------------------------------------------------------
+function investment(){
+
+var values = [$('.a')[0].value = Number(0), $('.b')[0].value = Number(4), $('.c')[0].value = Number(7), $('.d')[0].value = Number(10), $('.e')[0].value = Number(13)];
+
+console.log(values);
+$('.a').on("click",function(){
+console.log(values[0]+" was checked")
+$('.b').attr("disabled", true);
+$('.c').attr("disabled", true);
+$('.d').attr("disabled", true);
+$('.e').attr("disabled", true);
+});
+$('.b').on("click",function(){
+console.log(values[1]+" was checked")
+$('.c').attr("disabled", true);
+$('.d').attr("disabled", true);
+$('.e').attr("disabled", true);
+$('.a').attr("disabled", true);
+
+});
+$('.c').on("click",function(){
+console.log(values[2]+" was checked")
+$('.b').attr("disabled", true);
+$('.d').attr("disabled", true);
+$('.e').attr("disabled", true);
+$('.a').attr("disabled", true);
+});
+$('.d').on("click",function(){
+console.log(values[3]+" was checked")
+$('.c').attr("disabled", true);
+$('.b').attr("disabled", true);
+$('.e').attr("disabled", true);
+$('.a').attr("disabled", true);
+});
+$('.e').on("click",function(){
+console.log(values[4]+" was checked")
+$('.c').attr("disabled", true);
+$('.d').attr("disabled", true);
+$('.b').attr("disabled", true);
+$('.a').attr("disabled", true);
+});
+
+var secValues = [$('.f')[0].value = Number(0), $('.g')[0].value = Number(5), $('.h')[0].value = Number(9), $('.i')[0].value = Number(13)];
+
+console.log(secValues);
+$('.f').on("click",function(){
+console.log(values[0]+" was checked")
+$('.g').attr("disabled", true);
+$('.h').attr("disabled", true);
+$('.i').attr("disabled", true);
+});
+$('.g').on("click",function(){
+console.log(values[1]+" was checked")
+$('.f').attr("disabled", true);
+$('.h').attr("disabled", true);
+$('.i').attr("disabled", true);
+});
+$('.h').on("click",function(){
+console.log(values[2]+" was checked")
+$('.g').attr("disabled", true);
+$('.f').attr("disabled", true);
+$('.i').attr("disabled", true);
+});
+$('.i').on("click",function(){
+console.log(values[3]+" was checked")
+$('.g').attr("disabled", true);
+$('.h').attr("disabled", true);
+$('.f').attr("disabled", true);
+});
+
+var thirdValues = [$('.j')[0].value = Number(12), $('.k')[0].value = Number(6), $('.l')[0].value = Number(0)];
+console.log(thirdValues);
+
+$('.j').on("click",function(){
+console.log(thirdValues[0]+" was checked")
+$('.k')[0].value = Number(0);
+$('.l')[0].value = Number(0);
+$('.k').attr("disabled", true);
+$('.l').attr("disabled", true);
+var totTh=0;
+totTh+= Number($('.l')[0].value)+ Number($('.k')[0].value)+ Number($('.j')[0].value);
+console.log(totTh);
+});
+$('.k').on("click",function(){
+console.log(thirdValues[1]+" was checked")
+$('.j')[0].value = Number(0);
+$('.l')[0].value = Number(0);
+$('.l').attr("disabled", true);
+$('.j').attr("disabled", true);
+var totTh=0;
+totTh+= Number($('.l')[0].value)+ Number($('.k')[0].value)+ Number($('.j')[0].value);
+console.log(totTh);
+});
+$('.l').on("click",function(){
+console.log(thirdValues[2]+" was checked")
+$('.k')[0].value = Number(0);
+$('.j')[0].value = Number(0);
+$('.j').attr("disabled", true);
+$('.k').attr("disabled", true);
+var totTh=0;
+totTh+= Number($('.l')[0].value)+ Number($('.k')[0].value)+ Number($('.j')[0].value);
+console.log(totTh);
+});
+
+var fourthValues = [$('.m')[0].value = Number(0), $('.n')[0].value = Number(4), $('.o')[0].value = Number(8), $('.p')[0].value = Number(12)];
+console.log(fourthValues);
+
+$('.m').on("click",function(){
+console.log(fourthValues[0]+" was checked")
+$('.n')[0].value = Number(0);
+$('.o')[0].value = Number(0);
+$('.p')[0].value = Number(0);
+$('.n').attr("disabled", true);
+$('.o').attr("disabled", true);
+$('.p').attr("disabled", true);
+var totalFst=0;
+totalFst+= Number($('.m')[0].value)+ Number($('.n')[0].value)+ Number($('.o')[0].value)+ Number($('.p')[0].value);
+
+});
+$('.n').on("click",function(){
+console.log(fourthValues[1]+" was checked")
+$('.m')[0].value = Number(0);
+$('.o')[0].value = Number(0);
+$('.p')[0].value = Number(0);
+$('.m').attr("disabled", true);
+$('.o').attr("disabled", true);
+$('.p').attr("disabled", true);
+var totalSec=0;
+totalSec+= Number($('.m')[0].value)+ Number($('.n')[0].value)+ Number($('.o')[0].value)+ Number($('.p')[0].value);
+
+});
+
+$('.o').on("click",function(){
+console.log(fourthValues[2]+" was checked")
+$('.m')[0].value = Number(0);
+$('.n')[0].value = Number(0);
+$('.p')[0].value = Number(0);
+$('.m').attr("disabled", true);
+$('.n').attr("disabled", true);
+$('.p').attr("disabled", true);
+var totalTh=0;
+totalTh+= Number($('.m')[0].value)+ Number($('.n')[0].value)+ Number($('.o')[0].value)+ Number($('.p')[0].value);
+
+});
+
+$('.p').on("click",function(){
+console.log(fourthValues[3]+" was checked")
+$('.m')[0].value = Number(0);
+$('.n')[0].value = Number(0);
+$('.o')[0].value = Number(0);
+$('.m').attr("disabled", true);
+$('.n').attr("disabled", true);
+$('.o').attr("disabled", true);
+totalFo=0;
+totalFo+= Number($('.m')[0].value)+ Number($('.n')[0].value)+ Number($('.o')[0].value)+ Number($('.p')[0].value);
+
+});
+}
+investment();
+//---------------------------------------------------------
+
+
+
+
 
 
 
