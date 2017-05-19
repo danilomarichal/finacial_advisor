@@ -73,6 +73,8 @@ $('.bttn_sum').on('click', function(){
 })
 
 //--------------------------------------------------------
+
+
 function investment(){
 
 var values = [$('.a')[0].value = Number(0), $('.b')[0].value = Number(4), $('.c')[0].value = Number(7), $('.d')[0].value = Number(10), $('.e')[0].value = Number(13)];
@@ -136,7 +138,8 @@ $('.g').attr("disabled", true);
 $('.f').attr("disabled", true);
 $('.i').attr("disabled", true);
 });
-$('.i').on("click",function(){
+$('.i').on("click",function(e){
+  e.preventDefault();
 console.log(values[3]+" was checked")
 $('.g').attr("disabled", true);
 $('.h').attr("disabled", true);
@@ -167,7 +170,7 @@ totTh+= Number($('.l')[0].value)+ Number($('.k')[0].value)+ Number($('.j')[0].va
 console.log(totTh);
 });
 $('.l').on("click",function(){
-console.log(thirdValues[2]+" was checked")
+  console.log(thirdValues[2]+" was checked")
 $('.k')[0].value = Number(0);
 $('.j')[0].value = Number(0);
 $('.j').attr("disabled", true);
@@ -193,7 +196,7 @@ totalFst+= Number($('.m')[0].value)+ Number($('.n')[0].value)+ Number($('.o')[0]
 
 });
 $('.n').on("click",function(){
-console.log(fourthValues[1]+" was checked")
+ console.log(fourthValues[1]+" was checked")
 $('.m')[0].value = Number(0);
 $('.o')[0].value = Number(0);
 $('.p')[0].value = Number(0);
@@ -226,17 +229,30 @@ $('.o')[0].value = Number(0);
 $('.m').attr("disabled", true);
 $('.n').attr("disabled", true);
 $('.o').attr("disabled", true);
-totalFo=0;
+var totalFo=0;
 totalFo+= Number($('.m')[0].value)+ Number($('.n')[0].value)+ Number($('.o')[0].value)+ Number($('.p')[0].value);
 
 });
 }
-investment();
+
 //---------------------------------------------------------
 
-
-
-
+$('#submit_home').on("click",function(e){
+  e.preventDefault();
+var calcOne= Number($('.answ1')[0].value) - Number($('.answ2')[0].value);
+var third = calcOne*4.22/100;
+var finalThird = (third+calcOne)/360;
+var four = calcOne*3.44/100;
+var finalFour = (four+calcOne)/180;
+var fif = calcOne*3.48/100;
+var finalFif = (fif+calcOne)/360;
+var jumbo = calcOne*4.16/100;
+var finalJumbo = (jumbo+calcOne)/360;
+$('.third').append("Including an interest of 4.22 (30-year fixed rate) for this amount, your monthly mortgage would be approximately $"+finalThird);
+$('.fif').text("Including an interest of 3.44 (15-year fixed rate) for this amount, your monthly mortgage would be approximately $"+finalFour);
+$('.arm').text("Including an interest of 3.48 (5/1 ARM rate) for this amount, your monthly mortgage would be approximately $"+finalFif);
+$('.jumbo').text("Including an interest of 4.22 (30-year Jumbo rate) for this amount, your monthly mortgage would be approximately $"+finalJumbo);
+})
 
 
 
