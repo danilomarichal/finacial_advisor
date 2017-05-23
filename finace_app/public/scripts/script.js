@@ -66,12 +66,30 @@ $('.bttn_sum').on('click', function(){
    $('#big').text("Oops!!");
     $('#message').text("Looks like your savings are less than the 10% of your income. Reducing some of the expenses could increase this amount.")
   }
-  else if(savings > ten_perc){
+  else if(savings >= ten_perc){
     $('#big').text("Congratulations!");
     $('#message').text("Your numbers show income in excess of expenses. This surplus equals: $"+savings+" per month.")
   }
 })
+//-----------------------------------------------------------
 
+
+$('#submit_home').on("click",function(e){
+  e.preventDefault();
+var calcOne= Number($('.answ1')[0].value) - Number($('.answ2')[0].value);
+var third = calcOne*4.22/100;
+var finalThird = (third+calcOne)/360;
+var four = calcOne*3.44/100;
+var finalFour = (four+calcOne)/180;
+var fif = calcOne*3.48/100;
+var finalFif = (fif+calcOne)/360;
+var jumbo = calcOne*4.16/100;
+var finalJumbo = (jumbo+calcOne)/360;
+$('.third').text("Including an interest of 4.22 (30-year fixed rate) for this amount, your monthly mortgage would be approximately $"+finalThird.toFixed(2));
+$('.fif').text("Including an interest of 3.44 (15-year fixed rate) for this amount, your monthly mortgage would be approximately $"+finalFour.toFixed(2));
+$('.arm').text("Including an interest of 3.48 (5/1 ARM rate) for this amount, your monthly mortgage would be approximately $"+finalFif.toFixed(2));
+$('.jumbo').text("Including an interest of 4.22 (30-year Jumbo rate) for this amount, your monthly mortgage would be approximately $"+finalJumbo.toFixed(2));
+})
 //--------------------------------------------------------
 
 
@@ -159,6 +177,7 @@ var totTh=0;
 totTh+= Number($('.l')[0].value)+ Number($('.k')[0].value)+ Number($('.j')[0].value);
 console.log(totTh);
 });
+
 $('.k').on("click",function(){
 console.log(thirdValues[1]+" was checked")
 $('.j')[0].value = Number(0);
@@ -234,25 +253,9 @@ totalFo+= Number($('.m')[0].value)+ Number($('.n')[0].value)+ Number($('.o')[0].
 
 });
 }
-
+investment();
 //---------------------------------------------------------
 
-$('#submit_home').on("click",function(e){
-  e.preventDefault();
-var calcOne= Number($('.answ1')[0].value) - Number($('.answ2')[0].value);
-var third = calcOne*4.22/100;
-var finalThird = (third+calcOne)/360;
-var four = calcOne*3.44/100;
-var finalFour = (four+calcOne)/180;
-var fif = calcOne*3.48/100;
-var finalFif = (fif+calcOne)/360;
-var jumbo = calcOne*4.16/100;
-var finalJumbo = (jumbo+calcOne)/360;
-$('.third').append("Including an interest of 4.22 (30-year fixed rate) for this amount, your monthly mortgage would be approximately $"+finalThird);
-$('.fif').text("Including an interest of 3.44 (15-year fixed rate) for this amount, your monthly mortgage would be approximately $"+finalFour);
-$('.arm').text("Including an interest of 3.48 (5/1 ARM rate) for this amount, your monthly mortgage would be approximately $"+finalFif);
-$('.jumbo').text("Including an interest of 4.22 (30-year Jumbo rate) for this amount, your monthly mortgage would be approximately $"+finalJumbo);
-})
 
 
 

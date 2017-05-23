@@ -276,11 +276,12 @@ display: inline-block;
   margin-left: 200px;
 }
 .bttn_sum{
-  height: 120px;
-  width: 120px;
-  margin-left:20%;
-  background-color: red;
-  border-radius: 50%;
+  height: 50px;
+  width: 600px;
+  margin-left: -20%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: #00B737;
   text-align: center;
   font-size: 18px;
   border: 4px solid grey;
@@ -414,4 +415,96 @@ text-align: center;
 }
 .log-in{
   margin-left: 48%;
+}
+#invitation{
+  text-align: center;
+}
+.log{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 200px;
+  height: 250px;
+margin-left: 42%;
+margin-top: 50px;
+}
+.log button{
+margin-left:-10px;
+}
+.log form{
+  padding-top: 32px;
+}
+.log h5{
+ font-family: 'Lato', sans-serif;
+}
+.log input{
+ border-radius: 10%;
+}
+.begin{
+ font-family: 'Lato', sans-serif;
+ color: black;
+ text-align: center;
+}
+.imag_soc1{
+  height: 200px;
+  width: 400px;
+  float: left;
+  margin-left: 22px;
+}
+.imag_soc2{
+  height: 180px;
+  width: 180px;
+float: left;
+padding-top: 12px;
+margin-left: -50px;
+
+}
+.imag_soc3{
+  height: 140px;
+  width: 140px;
+ float: left;
+padding-top: 38px;
+margin-left: 50px;
+}
+.imag_soc4{
+  height: 140px;
+  width: 140px;
+  float: left;
+  padding-top: 38px;
+  margin-left: 100px;
+}
+.imag_soc5{
+  height: 110px;
+  width: 110px;
+  padding-top: 52px;
+  margin-left: 100px;
+}
+.move{
+  text-align: center;
+}
+.update{
+  margin-top: 100px;
+  margin-left: -40px;
+  background-color: black;
+  color:white;
+}
+.page_title{
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.page_title p{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 32px;
+}
+#mortgage{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding:40px;
+}
+#resp{
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }

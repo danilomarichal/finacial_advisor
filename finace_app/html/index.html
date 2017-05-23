@@ -18,7 +18,7 @@
   <li><a class="out" href="/logout">Logout</a></li>
 </ul>
 </div>
-<h1>Welcome {{email}}</h1>
+<h1 class="begin">Welcome {{email}}</h1>
 <!--<div class="updating">
 <form action = "/user?_method=PUT" method="post">
 <h5>Update your email:</h5>
@@ -86,16 +86,17 @@
 
 {{^logged_in}}
 <div class="main">
+<h1 class="begin">Start managing your money today</h1>
   <div class = "log">
   <form action="/login" method="post">
-     <h5>E-mail:</h5><br>
+     <h5>E-mail:</h5>
      <input class = "beginning" type="text" placeholder="E-mail" name="email"><br>
-     <h5>Password:</h5><br>
+     <h5>Password:</h5>
      <input class = "beginning" type="password" placeholder="Password" name="password"><br>
-  </div>
   <br>
 <button class="log-in" type="submit">Login</button>
 </form>
+</div>
     <br>
     <br>
     <br>
@@ -108,6 +109,14 @@
 </div>
  <div id = "invitation">
   <p>Not a member? <a href="/signup">Sign Up!</a></p>
+</div>
+<h1 class="begin">Conect with your social apps here</h1>
+<div id="social">
+<a href="https://github.com/"><img class="imag_soc1" src= "/images/img/github.png"></a>
+<a href="https://www.linkedin.com/"><img class="imag_soc2" src= "/images/img/linkedin.png"></a>
+<a href="https://twitter.com/"><img class="imag_soc3" src= "/images/img/twitter.png"></a>
+<a href="https://www.facebook.com/"><img class="imag_soc4" src= "/images/img/facebook.png"></a>
+<a href="https://www.instagram.com/"><img class="imag_soc5" src= "/images/img/inta.png"></a>
 </div>
 {{/logged_in}}
 
